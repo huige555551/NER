@@ -73,6 +73,11 @@ b_conv2 = bias_variable([64])
 h_conv2 = tf.nn.elu(conv2d(h_pool1, W_conv2) + b_conv2)
 h_pool2 = max_pool_2x2(h_conv2)
 
+W_conv3 = weight_variable([5, 5, 64, 128])
+b_conv3 = bias_variable([64])
+h_conv3 = tf.nn.elu(conv2d(h_pool1, W_conv2) + b_conv2)
+h_pool3 = max_pool_2x2(h_conv3)
+
 # 第三层 是个全连接层,输入维数7*7*64, 输出维数为1024
 W_fc1 = weight_variable([7 * 7 * 64, 1024])
 b_fc1 = bias_variable([1024])
@@ -94,7 +99,7 @@ accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 sess.run(tf.initialize_all_variables()) # 变量初始化
 # 用于记录每次训练后loss的值
 loss_val = []
-for i in range(20000):
+for i in range(1000):
     batch = mnist.train.next_batch(50)
     if i%100 == 0:
         train_accuracy, loss = sess.run([accuracy, cross_entropy], feed_dict={
