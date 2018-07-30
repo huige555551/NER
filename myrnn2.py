@@ -37,47 +37,43 @@ X = tf.reshape(_X, [-1, 28, 28])
 outputs = list()
 
 
-def lstm_cell(num_nodes, keep_prob):
-    lstm_cell = rnn.BasicLSTMCell(num_nodes)
-    lstm_cell = rnn.DropoutWrapper(lstm_cell, output_keep_prob=keep_prob)
-    return lstm_cell
+class LSTM_net():
+    def __init__(self):
+        self._build_net()
+
+    def _build_net(self):
+        self.h_state = self.lstm_net()
+        self.W = tf.Variable(tf.random_normal([hidden_size, class_num], 0, 0.1, tf.float32))
+        self.b = tf.Variable(tf.random_normal([class_num], 0, 0.1, tf.float32))
+        y_pre = tf.nn.softmax(tf.matmul(self.h_state, self.W) + self.b)
+
+        # Define loss and optimizer
+        self.cross_entropy = tf.reduce_mean(-tf.reduce_sum(y * tf.log(y_pre), reduction_indices=[1]))  # 损失函数，交叉熵
+        self.train_step = tf.train.AdamOptimizer(1e-4).minimize(self.cross_entropy)  # 使用adam优化
+
+        # Evaluate model (with test logits, for dropout to be disabled)
+        self.correct_prediction = tf.equal(tf.argmax(y, 1), tf.argmax(y_pre, 1))  # 计算准确度
+        self.accuracy = tf.reduce_mean(tf.cast(self.correct_prediction, tf.float32))
+
+    def lstm_cell(self, num_nodes, keep_prob):
+        lstm_cell = rnn.BasicLSTMCell(num_nodes)
+        lstm_cell = rnn.DropoutWrapper(lstm_cell, output_keep_prob=keep_prob)
+        return lstm_cell
+
+    def lstm_net(self):
+        mlstm_cell = rnn.MultiRNNCell([self.lstm_cell(hidden_size, keep_prob) for _ in range(layer_num)])
+        init_state = mlstm_cell.zero_state(batch_size, dtype=tf.float32)
+        state = init_state
+        with tf.variable_scope('RNN'):
+            for timestep in range(timestep_size):
+                (cell_output, state) = mlstm_cell(X[:, timestep, :], state)
+                outputs.append(cell_output)
+        # outputs.shape = [batch_size, timestep_size, hidden_size]
+        h_state = outputs[-1]
+        return h_state
 
 
-def lstm_net():
-    mlstm_cell = rnn.MultiRNNCell([lstm_cell(hidden_size, keep_prob) for _ in range(layer_num)])
-    init_state = mlstm_cell.zero_state(batch_size, dtype=tf.float32)
-    state = init_state
-    with tf.variable_scope('RNN'):
-        for timestep in range(timestep_size):
-            (cell_output, state) = mlstm_cell(X[:, timestep, :], state)
-            outputs.append(cell_output)
-    # outputs.shape = [batch_size, timestep_size, hidden_size]
-    h_state = outputs[-1]
-    return h_state
-
-
-h_state = lstm_net()
-W = tf.Variable(tf.random_normal([hidden_size, class_num], 0, 0.1, tf.float32))
-b = tf.Variable(tf.random_normal([class_num], 0, 0.1, tf.float32))
-y_pre = tf.nn.softmax(tf.matmul(h_state, W) + b)
-
-# Define loss and optimizer
-cross_entropy = tf.reduce_mean(-tf.reduce_sum(y * tf.log(y_pre), reduction_indices=[1]))  # 损失函数，交叉熵
-train_step = tf.train.AdamOptimizer(1e-4).minimize(cross_entropy)  # 使用adam优化
-
-# Evaluate model (with test logits, for dropout to be disabled)
-correct_prediction = tf.equal(tf.argmax(y, 1), tf.argmax(y_pre, 1))  # 计算准确度
-accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
-
-sess = tf.InteractiveSession()  # 建立交互式会话
-tf.initialize_all_variables().run()
-# 用于记录每次训练后loss的值
-loss_val = []
-saver = tf.train.Saver()
-ckpt = tf.train.get_checkpoint_state(FLAGS.model_path)
-
-
-def load_model():
+def load_model(sess, saver, ckpt):
     if ckpt is not None:
         path = ckpt.model_checkpoint_path
         print 'loading pre-trained model from %s....' % path
@@ -89,19 +85,19 @@ def load_model():
         return 0
 
 
-def train():
+def train(lstm_net, sess, saver, ckpt):
     # 加载已经训练好的模型，继续进行训练
     # if ckpt is not None:
     #     path = ckpt.model_checkpoint_path
     #     print 'loading pre-trained model from %s....' % path
     #     saver.restore(sess, path)
     #     trained_times = int(path[path.find('-') + 1:-5])
-    trained_times = load_model()
+    trained_times = load_model(sess, saver, ckpt)
     for i in range(training_steps - trained_times):
         _batch_size = FLAGS.train_batch_size
         batch = mnist.train.next_batch(_batch_size)
         if i % 100 == 0:
-            train_accuracy, loss = sess.run([accuracy, cross_entropy], feed_dict={
+            train_accuracy, loss = sess.run([lstm_net.accuracy, lstm_net.cross_entropy], feed_dict={
                 _X: batch[0], y: batch[1], keep_prob: FLAGS.test_keep_prob, batch_size: _batch_size})
             print("step %d, training accuracy %g, loss %.4f" % (i + trained_times, train_accuracy, loss))
         if i % 1000 == 0 and i != 0:
@@ -110,17 +106,19 @@ def train():
             # print('loss: %.4f' % cross_entropy)
         # train_step.run(feed_dict={x: batch[0], y_: batch[1], keep_prob: 0.5})
         # saver.save(sess, FLAGS.model_path, global_step=i)
-        sess.run([train_step], feed_dict={_X: batch[0], y: batch[1], keep_prob: FLAGS.train_keep_prob, batch_size: _batch_size})
+        sess.run([lstm_net.train_step],
+                 feed_dict={_X: batch[0], y: batch[1], keep_prob: FLAGS.train_keep_prob, batch_size: _batch_size})
 
 
-def test():
-    load_model()
-    print sess.run(accuracy, feed_dict={
-        _X: mnist.test.images, y: mnist.test.labels, keep_prob: FLAGS.test_keep_prob, batch_size: mnist.test.images.shape[0]})
+def test(lstm_net, sess, saver, ckpt):
+    load_model(sess, saver, ckpt)
+    print sess.run(lstm_net.accuracy, feed_dict={
+        _X: mnist.test.images, y: mnist.test.labels, keep_prob: FLAGS.test_keep_prob,
+        batch_size: mnist.test.images.shape[0]})
 
 
-def predictOne():
-    load_model()
+def predictOne(lstm_net, sess, saver, ckpt):
+    load_model(sess, saver, ckpt)
     X3 = mnist.train.images[10]
     img3 = X3.reshape([28, 28])
     # plt.imshow(img3, 'gray')
@@ -134,7 +132,7 @@ def predictOne():
     print 'X3_outputs:', X3_outputs.shape
     # X3_outputs.shape=(28, 256)
     np.reshape(X3_outputs, [-1, hidden_size])
-    h_W, h_bias = sess.run([W, b], feed_dict={
+    h_W, h_bias = sess.run([lstm_net.W, lstm_net.b], feed_dict={
         _X: X3, y: y_batch, keep_prob: 1, batch_size: 1})
     h_bias = np.reshape(h_bias, [-1, 10])
 
@@ -150,6 +148,11 @@ def predictOne():
 
 
 if __name__ == '__main__':
-    # test()
-    # predictOne()
-    train()
+    lstm_net = LSTM_net()
+    saver = tf.train.Saver()
+    ckpt = tf.train.get_checkpoint_state(FLAGS.model_path)
+    with tf.Session() as sess:
+        tf.initialize_all_variables().run()
+        # test(lstm_net, sess, saver, ckpt)
+        predictOne(lstm_net, sess, saver, ckpt)
+        # train(lstm_net, sess, saver, ckpt)
