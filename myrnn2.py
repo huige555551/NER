@@ -3,32 +3,30 @@ import tensorflow as tf
 from tensorflow.contrib import rnn
 from tensorflow.examples.tutorials.mnist import input_data
 import warnings
+import numpy as np
+from myrnn2_config import FLAGS
+import matplotlib.pyplot as plt
 
 warnings.filterwarnings('ignore')
-flags = tf.app.flags
-FLAGS = flags.FLAGS
-flags.DEFINE_string('data_dir', 'MNIST_data', 'File path!')
 mnist = input_data.read_data_sets(FLAGS.data_dir, one_hot=True)
-print (FLAGS.data_dir)
-print('test image:', mnist.test.images.shape)
-print('test labels:',mnist.test.labels.shape)
-print('train image:',mnist.train.images.shape)
-print('train labels:',mnist.train.labels.shape)
-
+print 'data_dir: ', FLAGS.data_dir
+print('test image shape:', mnist.test.images.shape)
+print('test labels shape:', mnist.test.labels.shape)
+print('train image shape:', mnist.train.images.shape)
+print('train labels shape:', mnist.train.labels.shape)
 
 # super parameters
-lr = 1e-3
-training_steps = 1000
+lr = FLAGS.lr
+training_steps = FLAGS.training_steps
 
 # netword parameter
-input_size = 28
-timestep_size = 28
-hidden_size = 256
-layer_num = 2
-class_num = 10
+input_size = FLAGS.input_size
+timestep_size = FLAGS.timestep_size
+hidden_size = FLAGS.hidden_size
+layer_num = FLAGS.layer_num
+class_num = FLAGS.class_num
 
 # input
-
 _X = tf.placeholder(tf.float32, [None, 784])
 y = tf.placeholder(tf.float32, [None, class_num])
 # 在训练和测试的时候，我们想用不同的 batch_size.所以采用占位符的方式
@@ -36,6 +34,7 @@ batch_size = tf.placeholder(tf.int32, [])  # 注意类型必须为 tf.int32, bat
 keep_prob = tf.placeholder(tf.float32, [])
 
 X = tf.reshape(_X, [-1, 28, 28])
+outputs = list()
 
 
 def lstm_cell(num_nodes, keep_prob):
@@ -44,42 +43,113 @@ def lstm_cell(num_nodes, keep_prob):
     return lstm_cell
 
 
-mlstm_cell = rnn.MultiRNNCell([lstm_cell(hidden_size, keep_prob) for _ in range(layer_num)])
+def lstm_net():
+    mlstm_cell = rnn.MultiRNNCell([lstm_cell(hidden_size, keep_prob) for _ in range(layer_num)])
+    init_state = mlstm_cell.zero_state(batch_size, dtype=tf.float32)
+    state = init_state
+    with tf.variable_scope('RNN'):
+        for timestep in range(timestep_size):
+            (cell_output, state) = mlstm_cell(X[:, timestep, :], state)
+            outputs.append(cell_output)
+    # outputs.shape = [batch_size, timestep_size, hidden_size]
+    h_state = outputs[-1]
+    return h_state
 
-init_state = mlstm_cell.zero_state(batch_size, dtype=tf.float32)
 
-outputs = list()
-state = init_state
-with tf.variable_scope('RNN'):
-    for timestep in range(timestep_size):
-        (cell_output, state) = mlstm_cell(X[:, timestep, :], state)
-        outputs.append(cell_output)
-h_state = outputs[-1]
-
+h_state = lstm_net()
 W = tf.Variable(tf.random_normal([hidden_size, class_num], 0, 0.1, tf.float32))
 b = tf.Variable(tf.random_normal([class_num], 0, 0.1, tf.float32))
 y_pre = tf.nn.softmax(tf.matmul(h_state, W) + b)
 
-# sess = tf.Session()
-
+# Define loss and optimizer
 cross_entropy = tf.reduce_mean(-tf.reduce_sum(y * tf.log(y_pre), reduction_indices=[1]))  # 损失函数，交叉熵
 train_step = tf.train.AdamOptimizer(1e-4).minimize(cross_entropy)  # 使用adam优化
+
+# Evaluate model (with test logits, for dropout to be disabled)
 correct_prediction = tf.equal(tf.argmax(y, 1), tf.argmax(y_pre, 1))  # 计算准确度
 accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
-# sess.run(tf.initialize_all_variables()) # 变量初始化
+
 sess = tf.InteractiveSession()  # 建立交互式会话
 tf.initialize_all_variables().run()
 # 用于记录每次训练后loss的值
 loss_val = []
-for i in range(training_steps):
-    _batch_size = 50
-    batch = mnist.train.next_batch(_batch_size)
-    if i % 100 == 0:
-        train_accuracy, loss = sess.run([accuracy, cross_entropy], feed_dict={
-            _X: batch[0], y: batch[1], keep_prob: 1, batch_size: _batch_size})
-        print("step %d, training accuracy %g, loss %.4f" % (i, train_accuracy, loss))
-        # print('loss: %.4f' % cross_entropy)
-    # train_step.run(feed_dict={x: batch[0], y_: batch[1], keep_prob: 0.5})
-    sess.run([train_step], feed_dict={_X: batch[0], y: batch[1], keep_prob: 1, batch_size: _batch_size})
-print(sess.run(accuracy, feed_dict={
-    _X: mnist.test.images, y:mnist.test.labels, keep_prob: 1, batch_size: mnist.test.images.shape[0]}))
+saver = tf.train.Saver()
+ckpt = tf.train.get_checkpoint_state(FLAGS.model_path)
+
+
+def load_model():
+    if ckpt is not None:
+        path = ckpt.model_checkpoint_path
+        print 'loading pre-trained model from %s....' % path
+        saver.restore(sess, path)
+        return int(path[path.find('-') + 1:-5])
+    else:
+        path = ckpt.model_checkpoint_path
+        print 'No pre-trained model from %s....' % path
+        return 0
+
+
+def train():
+    # 加载已经训练好的模型，继续进行训练
+    # if ckpt is not None:
+    #     path = ckpt.model_checkpoint_path
+    #     print 'loading pre-trained model from %s....' % path
+    #     saver.restore(sess, path)
+    #     trained_times = int(path[path.find('-') + 1:-5])
+    trained_times = load_model()
+    for i in range(training_steps - trained_times):
+        _batch_size = FLAGS.train_batch_size
+        batch = mnist.train.next_batch(_batch_size)
+        if i % 100 == 0:
+            train_accuracy, loss = sess.run([accuracy, cross_entropy], feed_dict={
+                _X: batch[0], y: batch[1], keep_prob: FLAGS.test_keep_prob, batch_size: _batch_size})
+            print("step %d, training accuracy %g, loss %.4f" % (i + trained_times, train_accuracy, loss))
+        if i % 1000 == 0 and i != 0:
+            save_path = saver.save(sess, FLAGS.model_path + '/points-' + str(i + trained_times) + '.ckpt')
+            print "Model saved in file: ", save_path
+            # print('loss: %.4f' % cross_entropy)
+        # train_step.run(feed_dict={x: batch[0], y_: batch[1], keep_prob: 0.5})
+        # saver.save(sess, FLAGS.model_path, global_step=i)
+        sess.run([train_step], feed_dict={_X: batch[0], y: batch[1], keep_prob: FLAGS.train_keep_prob, batch_size: _batch_size})
+
+
+def test():
+    load_model()
+    print sess.run(accuracy, feed_dict={
+        _X: mnist.test.images, y: mnist.test.labels, keep_prob: FLAGS.test_keep_prob, batch_size: mnist.test.images.shape[0]})
+
+
+def predictOne():
+    load_model()
+    X3 = mnist.train.images[10]
+    img3 = X3.reshape([28, 28])
+    # plt.imshow(img3, 'gray')
+    # plt.show()
+    X3.shape = [-1, 784]
+    y_batch = mnist.train.labels[10]
+    y_batch.shape = [-1, class_num]
+    # X3_outputs.shape=(28, 1, 256)
+    X3_outputs = np.array(sess.run(outputs, feed_dict={
+        _X: X3, y: y_batch, keep_prob: 0.5, batch_size: 1}))
+    print 'X3_outputs:', X3_outputs.shape
+    # X3_outputs.shape=(28, 256)
+    np.reshape(X3_outputs, [-1, hidden_size])
+    h_W, h_bias = sess.run([W, b], feed_dict={
+        _X: X3, y: y_batch, keep_prob: 1, batch_size: 1})
+    h_bias = np.reshape(h_bias, [-1, 10])
+
+    bar_index = range(class_num)
+    for i in range(X3_outputs.shape[0]):
+        plt.subplot(7, 4, i + 1)
+        # X3_h_state.shape=(1,256)
+        X3_h_shate = X3_outputs[i, :].reshape([-1, hidden_size])
+        pro = sess.run(tf.nn.softmax(tf.matmul(X3_h_shate, h_W) + h_bias))
+        plt.bar(bar_index, pro[0], width=0.2, align='center')
+        plt.axis('off')
+    plt.show()
+
+
+if __name__ == '__main__':
+    # test()
+    # predictOne()
+    train()
