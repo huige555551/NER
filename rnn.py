@@ -11,7 +11,6 @@ DROPOUT_RATE = config.FLAGS.dropout
 EPOCH = config.FLAGS.epoch
 TAGS_NUM = get_class_size()
 
-
 class NER_net:
     def __init__(self, scope_name, iterator, embedding, batch_size):
         '''
