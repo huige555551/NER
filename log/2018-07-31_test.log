@@ -1,0 +1,49 @@
+2018-07-31 09:56:57,591 - log/2018-07-31_test.log - INFO - data_dir: MNIST_data
+2018-07-31 09:56:57,591 - log/2018-07-31_test.log - INFO - test image shape: (10000, 784)
+2018-07-31 09:56:57,591 - log/2018-07-31_test.log - INFO - test labels shape: (10000, 10)
+2018-07-31 09:56:57,591 - log/2018-07-31_test.log - INFO - train image shape: (55000, 784)
+2018-07-31 09:56:57,591 - log/2018-07-31_test.log - INFO - train labels shape: (55000, 10)
+2018-07-31 09:57:10,790 - log/2018-07-31_test.log - INFO - accuracy: 0.974300026894
+2018-07-31 09:57:40,399 - log/2018-07-31_test.log - INFO - data_dir: MNIST_data
+2018-07-31 09:57:40,400 - log/2018-07-31_test.log - INFO - test image shape: (10000, 784)
+2018-07-31 09:57:40,400 - log/2018-07-31_test.log - INFO - test labels shape: (10000, 10)
+2018-07-31 09:57:40,400 - log/2018-07-31_test.log - INFO - train image shape: (55000, 784)
+2018-07-31 09:57:40,400 - log/2018-07-31_test.log - INFO - train labels shape: (55000, 10)
+2018-07-31 09:58:17,647 - log/2018-07-31_test.log - INFO - data_dir: MNIST_data
+2018-07-31 09:58:17,648 - log/2018-07-31_test.log - INFO - test image shape: (10000, 784)
+2018-07-31 09:58:17,648 - log/2018-07-31_test.log - INFO - test labels shape: (10000, 10)
+2018-07-31 09:58:17,648 - log/2018-07-31_test.log - INFO - train image shape: (55000, 784)
+2018-07-31 09:58:17,648 - log/2018-07-31_test.log - INFO - train labels shape: (55000, 10)
+2018-07-31 09:58:56,847 - log/2018-07-31_test.log - INFO - data_dir: MNIST_data
+2018-07-31 09:58:56,847 - log/2018-07-31_test.log - INFO - test image shape: (10000, 784)
+2018-07-31 09:58:56,847 - log/2018-07-31_test.log - INFO - test labels shape: (10000, 10)
+2018-07-31 09:58:56,848 - log/2018-07-31_test.log - INFO - train image shape: (55000, 784)
+2018-07-31 09:58:56,848 - log/2018-07-31_test.log - INFO - train labels shape: (55000, 10)
+2018-07-31 09:59:10,398 - log/2018-07-31_test.log - INFO - accuracy: 0.9743
+2018-07-31 10:09:48,365 - log/2018-07-31_test.log - INFO - data_dir: MNIST_data
+2018-07-31 10:09:48,365 - log/2018-07-31_test.log - INFO - test image shape: (10000, 784)
+2018-07-31 10:09:48,366 - log/2018-07-31_test.log - INFO - test labels shape: (10000, 10)
+2018-07-31 10:09:48,366 - log/2018-07-31_test.log - INFO - train image shape: (55000, 784)
+2018-07-31 10:09:48,366 - log/2018-07-31_test.log - INFO - train labels shape: (55000, 10)
+2018-07-31 10:10:04,973 - log/2018-07-31_test.log - INFO - data_dir: MNIST_data
+2018-07-31 10:10:04,975 - log/2018-07-31_test.log - INFO - test image shape: (10000, 784)
+2018-07-31 10:10:04,975 - log/2018-07-31_test.log - INFO - test labels shape: (10000, 10)
+2018-07-31 10:10:04,975 - log/2018-07-31_test.log - INFO - train image shape: (55000, 784)
+2018-07-31 10:10:04,975 - log/2018-07-31_test.log - INFO - train labels shape: (55000, 10)
+2018-07-31 10:10:25,086 - log/2018-07-31_test.log - INFO - data_dir: MNIST_data
+2018-07-31 10:10:25,086 - log/2018-07-31_test.log - INFO - test image shape: (10000, 784)
+2018-07-31 10:10:25,086 - log/2018-07-31_test.log - INFO - test labels shape: (10000, 10)
+2018-07-31 10:10:25,086 - log/2018-07-31_test.log - INFO - train image shape: (55000, 784)
+2018-07-31 10:10:25,086 - log/2018-07-31_test.log - INFO - train labels shape: (55000, 10)
+2018-07-31 10:10:48,029 - log/2018-07-31_test.log - INFO - data_dir: MNIST_data
+2018-07-31 10:10:48,030 - log/2018-07-31_test.log - INFO - test image shape: (10000, 784)
+2018-07-31 10:10:48,030 - log/2018-07-31_test.log - INFO - test labels shape: (10000, 10)
+2018-07-31 10:10:48,030 - log/2018-07-31_test.log - INFO - train image shape: (55000, 784)
+2018-07-31 10:10:48,030 - log/2018-07-31_test.log - INFO - train labels shape: (55000, 10)
+2018-07-31 10:11:09,006 - log/2018-07-31_test.log - INFO - data_dir: MNIST_data
+2018-07-31 10:11:09,007 - log/2018-07-31_test.log - INFO - test image shape: (10000, 784)
+2018-07-31 10:11:09,007 - log/2018-07-31_test.log - INFO - test labels shape: (10000, 10)
+2018-07-31 10:11:09,007 - log/2018-07-31_test.log - INFO - train image shape: (55000, 784)
+2018-07-31 10:11:09,007 - log/2018-07-31_test.log - INFO - train labels shape: (55000, 10)
+2018-07-31 10:11:09,007 - log/2018-07-31_test.log - INFO - loading pre-trained model from model/points-4000.ckpt....
+2018-07-31 10:11:22,610 - log/2018-07-31_test.log - INFO - accuracy: 0.9743

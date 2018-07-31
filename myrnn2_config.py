@@ -1,10 +1,15 @@
 import tensorflow as tf
-
+import os
+import datetime
 flags = tf.app.flags
 FLAGS = flags.FLAGS
 
 flags.DEFINE_string('data_dir', 'MNIST_data', 'dataset path!')
 flags.DEFINE_string('model_path', 'model', 'Model save path!')
+flags.DEFINE_string('train_log_file', os.path.join('log', str(datetime.date.today()) +  '_train.log'), 'Model save path!')
+flags.DEFINE_string('test_log_file', os.path.join('log', str(datetime.date.today()) +  '_test.log'), 'Model save path!')
+flags.DEFINE_string('predictOne_log_file', os.path.join('log', str(datetime.date.today()) + '_predictOne.log'), 'Model save path!')
+
 flags.DEFINE_boolean("train", True, 'whether train the model')
 
 #config for the model

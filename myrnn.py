@@ -26,7 +26,7 @@ handle 28 sequences of 28 steps for every sample.
 
 # Training Parameters
 learning_rate = 0.001
-training_steps = 100
+training_steps = 10000
 batch_size = 128
 display_step = 200
 
