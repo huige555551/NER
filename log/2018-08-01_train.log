@@ -1,0 +1,279 @@
+2018-08-01 10:34:17,955 - log/2018-08-01_train.log - INFO - data_dir: MNIST_data
+2018-08-01 10:34:17,955 - log/2018-08-01_train.log - INFO - test image shape: (10000, 784)
+2018-08-01 10:34:17,955 - log/2018-08-01_train.log - INFO - test labels shape: (10000, 10)
+2018-08-01 10:34:17,955 - log/2018-08-01_train.log - INFO - train image shape: (55000, 784)
+2018-08-01 10:34:17,955 - log/2018-08-01_train.log - INFO - train labels shape: (55000, 10)
+2018-08-01 10:34:17,955 - log/2018-08-01_train.log - INFO - loading pre-trained model from model/points-4000.ckpt....
+2018-08-01 10:34:20,158 - log/2018-08-01_train.log - INFO - step 4000, training accuracy 0.96, loss 0.1598
+2018-08-01 10:44:51,189 - log/2018-08-01_train.log - INFO - data_dir: MNIST_data
+2018-08-01 10:44:51,190 - log/2018-08-01_train.log - INFO - test image shape: (10000, 784)
+2018-08-01 10:44:51,190 - log/2018-08-01_train.log - INFO - test labels shape: (10000, 10)
+2018-08-01 10:44:51,190 - log/2018-08-01_train.log - INFO - train image shape: (55000, 784)
+2018-08-01 10:44:51,190 - log/2018-08-01_train.log - INFO - train labels shape: (55000, 10)
+2018-08-01 10:44:51,190 - log/2018-08-01_train.log - INFO - loading pre-trained model from model/points-4000.ckpt....
+2018-08-01 10:47:29,146 - log/2018-08-01_train.log - INFO - data_dir: MNIST_data
+2018-08-01 10:47:29,147 - log/2018-08-01_train.log - INFO - test image shape: (10000, 784)
+2018-08-01 10:47:29,147 - log/2018-08-01_train.log - INFO - test labels shape: (10000, 10)
+2018-08-01 10:47:29,147 - log/2018-08-01_train.log - INFO - train image shape: (55000, 784)
+2018-08-01 10:47:29,147 - log/2018-08-01_train.log - INFO - train labels shape: (55000, 10)
+2018-08-01 10:47:29,147 - log/2018-08-01_train.log - INFO - loading pre-trained model from model/points-4000.ckpt....
+2018-08-01 10:48:10,068 - log/2018-08-01_train.log - INFO - data_dir: MNIST_data
+2018-08-01 10:48:10,070 - log/2018-08-01_train.log - INFO - test image shape: (10000, 784)
+2018-08-01 10:48:10,070 - log/2018-08-01_train.log - INFO - test labels shape: (10000, 10)
+2018-08-01 10:48:10,071 - log/2018-08-01_train.log - INFO - train image shape: (55000, 784)
+2018-08-01 10:48:10,071 - log/2018-08-01_train.log - INFO - train labels shape: (55000, 10)
+2018-08-01 10:48:10,071 - log/2018-08-01_train.log - INFO - loading pre-trained model from model/points-4000.ckpt....
+2018-08-01 10:51:44,076 - log/2018-08-01_train.log - INFO - data_dir: MNIST_data
+2018-08-01 10:51:44,077 - log/2018-08-01_train.log - INFO - test image shape: (10000, 784)
+2018-08-01 10:51:44,077 - log/2018-08-01_train.log - INFO - test labels shape: (10000, 10)
+2018-08-01 10:51:44,077 - log/2018-08-01_train.log - INFO - train image shape: (55000, 784)
+2018-08-01 10:51:44,077 - log/2018-08-01_train.log - INFO - train labels shape: (55000, 10)
+2018-08-01 10:51:44,077 - log/2018-08-01_train.log - INFO - loading pre-trained model from model/points-4000.ckpt....
+2018-08-01 10:52:01,911 - log/2018-08-01_train.log - INFO - data_dir: MNIST_data
+2018-08-01 10:52:01,912 - log/2018-08-01_train.log - INFO - test image shape: (10000, 784)
+2018-08-01 10:52:01,912 - log/2018-08-01_train.log - INFO - test labels shape: (10000, 10)
+2018-08-01 10:52:01,912 - log/2018-08-01_train.log - INFO - train image shape: (55000, 784)
+2018-08-01 10:52:01,913 - log/2018-08-01_train.log - INFO - train labels shape: (55000, 10)
+2018-08-01 10:52:01,913 - log/2018-08-01_train.log - INFO - loading pre-trained model from model/points-4000.ckpt....
+2018-08-01 10:52:41,448 - log/2018-08-01_train.log - INFO - data_dir: MNIST_data
+2018-08-01 10:52:41,449 - log/2018-08-01_train.log - INFO - test image shape: (10000, 784)
+2018-08-01 10:52:41,449 - log/2018-08-01_train.log - INFO - test labels shape: (10000, 10)
+2018-08-01 10:52:41,449 - log/2018-08-01_train.log - INFO - train image shape: (55000, 784)
+2018-08-01 10:52:41,450 - log/2018-08-01_train.log - INFO - train labels shape: (55000, 10)
+2018-08-01 10:52:41,450 - log/2018-08-01_train.log - INFO - loading pre-trained model from model/points-4000.ckpt....
+2018-08-01 10:54:19,652 - log/2018-08-01_train.log - INFO - data_dir: MNIST_data
+2018-08-01 10:54:19,654 - log/2018-08-01_train.log - INFO - test image shape: (10000, 784)
+2018-08-01 10:54:19,654 - log/2018-08-01_train.log - INFO - test labels shape: (10000, 10)
+2018-08-01 10:54:19,654 - log/2018-08-01_train.log - INFO - train image shape: (55000, 784)
+2018-08-01 10:54:19,654 - log/2018-08-01_train.log - INFO - train labels shape: (55000, 10)
+2018-08-01 10:54:19,654 - log/2018-08-01_train.log - INFO - loading pre-trained model from model/points-4000.ckpt....
+2018-08-01 10:55:16,590 - log/2018-08-01_train.log - INFO - data_dir: MNIST_data
+2018-08-01 10:55:16,591 - log/2018-08-01_train.log - INFO - test image shape: (10000, 784)
+2018-08-01 10:55:16,591 - log/2018-08-01_train.log - INFO - test labels shape: (10000, 10)
+2018-08-01 10:55:16,592 - log/2018-08-01_train.log - INFO - train image shape: (55000, 784)
+2018-08-01 10:55:16,592 - log/2018-08-01_train.log - INFO - train labels shape: (55000, 10)
+2018-08-01 10:55:16,592 - log/2018-08-01_train.log - INFO - loading pre-trained model from model/points-4000.ckpt....
+2018-08-01 10:55:24,459 - log/2018-08-01_train.log - INFO - data_dir: MNIST_data
+2018-08-01 10:55:24,459 - log/2018-08-01_train.log - INFO - test image shape: (10000, 784)
+2018-08-01 10:55:24,460 - log/2018-08-01_train.log - INFO - test labels shape: (10000, 10)
+2018-08-01 10:55:24,460 - log/2018-08-01_train.log - INFO - train image shape: (55000, 784)
+2018-08-01 10:55:24,460 - log/2018-08-01_train.log - INFO - train labels shape: (55000, 10)
+2018-08-01 10:55:24,460 - log/2018-08-01_train.log - INFO - loading pre-trained model from model/points-4000.ckpt....
+2018-08-01 10:56:20,579 - log/2018-08-01_train.log - INFO - data_dir: MNIST_data
+2018-08-01 10:56:20,579 - log/2018-08-01_train.log - INFO - test image shape: (10000, 784)
+2018-08-01 10:56:20,580 - log/2018-08-01_train.log - INFO - test labels shape: (10000, 10)
+2018-08-01 10:56:20,580 - log/2018-08-01_train.log - INFO - train image shape: (55000, 784)
+2018-08-01 10:56:20,580 - log/2018-08-01_train.log - INFO - train labels shape: (55000, 10)
+2018-08-01 10:56:20,580 - log/2018-08-01_train.log - INFO - loading pre-trained model from model/points-4000.ckpt....
+2018-08-01 10:58:03,208 - log/2018-08-01_train.log - INFO - data_dir: MNIST_data
+2018-08-01 10:58:03,208 - log/2018-08-01_train.log - INFO - test image shape: (10000, 784)
+2018-08-01 10:58:03,209 - log/2018-08-01_train.log - INFO - test labels shape: (10000, 10)
+2018-08-01 10:58:03,209 - log/2018-08-01_train.log - INFO - train image shape: (55000, 784)
+2018-08-01 10:58:03,209 - log/2018-08-01_train.log - INFO - train labels shape: (55000, 10)
+2018-08-01 10:58:03,209 - log/2018-08-01_train.log - INFO - loading pre-trained model from model/points-4000.ckpt....
+2018-08-01 11:01:19,502 - log/2018-08-01_train.log - INFO - data_dir: MNIST_data
+2018-08-01 11:01:19,503 - log/2018-08-01_train.log - INFO - test image shape: (10000, 784)
+2018-08-01 11:01:19,503 - log/2018-08-01_train.log - INFO - test labels shape: (10000, 10)
+2018-08-01 11:01:19,503 - log/2018-08-01_train.log - INFO - train image shape: (55000, 784)
+2018-08-01 11:01:19,503 - log/2018-08-01_train.log - INFO - train labels shape: (55000, 10)
+2018-08-01 11:01:19,503 - log/2018-08-01_train.log - INFO - loading pre-trained model from model/points-4000.ckpt....
+2018-08-01 11:02:56,424 - log/2018-08-01_train.log - INFO - data_dir: MNIST_data
+2018-08-01 11:02:56,426 - log/2018-08-01_train.log - INFO - test image shape: (10000, 784)
+2018-08-01 11:02:56,426 - log/2018-08-01_train.log - INFO - test labels shape: (10000, 10)
+2018-08-01 11:02:56,426 - log/2018-08-01_train.log - INFO - train image shape: (55000, 784)
+2018-08-01 11:02:56,426 - log/2018-08-01_train.log - INFO - train labels shape: (55000, 10)
+2018-08-01 11:02:56,426 - log/2018-08-01_train.log - INFO - loading pre-trained model from model/points-4000.ckpt....
+2018-08-01 11:04:19,426 - log/2018-08-01_train.log - INFO - data_dir: MNIST_data
+2018-08-01 11:04:19,427 - log/2018-08-01_train.log - INFO - test image shape: (10000, 784)
+2018-08-01 11:04:19,427 - log/2018-08-01_train.log - INFO - test labels shape: (10000, 10)
+2018-08-01 11:04:19,427 - log/2018-08-01_train.log - INFO - train image shape: (55000, 784)
+2018-08-01 11:04:19,427 - log/2018-08-01_train.log - INFO - train labels shape: (55000, 10)
+2018-08-01 11:04:19,427 - log/2018-08-01_train.log - INFO - loading pre-trained model from model/points-4000.ckpt....
+2018-08-01 11:04:19,964 - log/2018-08-01_train.log - INFO - step 4000, training accuracy 0.98, loss 0.1397
+2018-08-01 11:05:04,149 - log/2018-08-01_train.log - INFO - data_dir: MNIST_data
+2018-08-01 11:05:04,150 - log/2018-08-01_train.log - INFO - test image shape: (10000, 784)
+2018-08-01 11:05:04,150 - log/2018-08-01_train.log - INFO - test labels shape: (10000, 10)
+2018-08-01 11:05:04,150 - log/2018-08-01_train.log - INFO - train image shape: (55000, 784)
+2018-08-01 11:05:04,151 - log/2018-08-01_train.log - INFO - train labels shape: (55000, 10)
+2018-08-01 11:05:04,151 - log/2018-08-01_train.log - INFO - loading pre-trained model from model/points-4000.ckpt....
+2018-08-01 11:05:04,692 - log/2018-08-01_train.log - INFO - step 4000, training accuracy 0.94, loss 0.1374
+2018-08-01 12:25:03,020 - log/2018-08-01_train.log - INFO - data_dir: MNIST_data
+2018-08-01 12:25:03,021 - log/2018-08-01_train.log - INFO - test image shape: (10000, 784)
+2018-08-01 12:25:03,021 - log/2018-08-01_train.log - INFO - test labels shape: (10000, 10)
+2018-08-01 12:25:03,021 - log/2018-08-01_train.log - INFO - train image shape: (55000, 784)
+2018-08-01 12:25:03,021 - log/2018-08-01_train.log - INFO - train labels shape: (55000, 10)
+2018-08-01 12:25:03,021 - log/2018-08-01_train.log - INFO - loading pre-trained model from model/points-4000.ckpt....
+2018-08-01 12:25:03,479 - log/2018-08-01_train.log - INFO - step 4000, training accuracy 0.94, loss 0.0902
+2018-08-01 12:40:29,633 - log/2018-08-01_train.log - INFO - data_dir: MNIST_data
+2018-08-01 12:40:29,634 - log/2018-08-01_train.log - INFO - test image shape: (10000, 784)
+2018-08-01 12:40:29,634 - log/2018-08-01_train.log - INFO - test labels shape: (10000, 10)
+2018-08-01 12:40:29,634 - log/2018-08-01_train.log - INFO - train image shape: (55000, 784)
+2018-08-01 12:40:29,634 - log/2018-08-01_train.log - INFO - train labels shape: (55000, 10)
+2018-08-01 12:40:29,634 - log/2018-08-01_train.log - INFO - loading pre-trained model from model/points-4000.ckpt....
+2018-08-01 12:40:30,117 - log/2018-08-01_train.log - INFO - step 4000, training accuracy 0.98, loss 0.1921
+2018-08-01 12:45:05,202 - log/2018-08-01_train.log - INFO - data_dir: MNIST_data
+2018-08-01 12:45:05,202 - log/2018-08-01_train.log - INFO - test image shape: (10000, 784)
+2018-08-01 12:45:05,202 - log/2018-08-01_train.log - INFO - test labels shape: (10000, 10)
+2018-08-01 12:45:05,202 - log/2018-08-01_train.log - INFO - train image shape: (55000, 784)
+2018-08-01 12:45:05,202 - log/2018-08-01_train.log - INFO - train labels shape: (55000, 10)
+2018-08-01 12:45:05,202 - log/2018-08-01_train.log - INFO - loading pre-trained model from model/points-4000.ckpt....
+2018-08-01 12:45:05,704 - log/2018-08-01_train.log - INFO - step 4000, training accuracy 0.94, loss 0.1544
+2018-08-01 12:51:35,694 - log/2018-08-01_train.log - INFO - data_dir: MNIST_data
+2018-08-01 12:51:35,695 - log/2018-08-01_train.log - INFO - test image shape: (10000, 784)
+2018-08-01 12:51:35,695 - log/2018-08-01_train.log - INFO - test labels shape: (10000, 10)
+2018-08-01 12:51:35,695 - log/2018-08-01_train.log - INFO - train image shape: (55000, 784)
+2018-08-01 12:51:35,695 - log/2018-08-01_train.log - INFO - train labels shape: (55000, 10)
+2018-08-01 12:51:35,695 - log/2018-08-01_train.log - INFO - loading pre-trained model from model/points-4000.ckpt....
+2018-08-01 12:53:25,563 - log/2018-08-01_train.log - INFO - data_dir: MNIST_data
+2018-08-01 12:53:25,563 - log/2018-08-01_train.log - INFO - test image shape: (10000, 784)
+2018-08-01 12:53:25,563 - log/2018-08-01_train.log - INFO - test labels shape: (10000, 10)
+2018-08-01 12:53:25,563 - log/2018-08-01_train.log - INFO - train image shape: (55000, 784)
+2018-08-01 12:53:25,563 - log/2018-08-01_train.log - INFO - train labels shape: (55000, 10)
+2018-08-01 12:53:25,563 - log/2018-08-01_train.log - INFO - loading pre-trained model from model/points-4000.ckpt....
+2018-08-01 12:53:26,131 - log/2018-08-01_train.log - INFO - step 4000, training accuracy 1, loss 0.0083
+2018-08-01 12:55:10,252 - log/2018-08-01_train.log - INFO - data_dir: MNIST_data
+2018-08-01 12:55:10,253 - log/2018-08-01_train.log - INFO - test image shape: (10000, 784)
+2018-08-01 12:55:10,253 - log/2018-08-01_train.log - INFO - test labels shape: (10000, 10)
+2018-08-01 12:55:10,253 - log/2018-08-01_train.log - INFO - train image shape: (55000, 784)
+2018-08-01 12:55:10,253 - log/2018-08-01_train.log - INFO - train labels shape: (55000, 10)
+2018-08-01 12:55:10,253 - log/2018-08-01_train.log - INFO - loading pre-trained model from model/points-4000.ckpt....
+2018-08-01 12:55:10,867 - log/2018-08-01_train.log - INFO - step 4000, training accuracy 0.98, loss 0.0434
+2018-08-01 12:55:42,667 - log/2018-08-01_train.log - INFO - data_dir: MNIST_data
+2018-08-01 12:55:42,669 - log/2018-08-01_train.log - INFO - test image shape: (10000, 784)
+2018-08-01 12:55:42,669 - log/2018-08-01_train.log - INFO - test labels shape: (10000, 10)
+2018-08-01 12:55:42,669 - log/2018-08-01_train.log - INFO - train image shape: (55000, 784)
+2018-08-01 12:55:42,669 - log/2018-08-01_train.log - INFO - train labels shape: (55000, 10)
+2018-08-01 12:55:42,670 - log/2018-08-01_train.log - INFO - loading pre-trained model from model/points-4000.ckpt....
+2018-08-01 12:56:37,198 - log/2018-08-01_train.log - INFO - data_dir: MNIST_data
+2018-08-01 12:56:37,200 - log/2018-08-01_train.log - INFO - test image shape: (10000, 784)
+2018-08-01 12:56:37,200 - log/2018-08-01_train.log - INFO - test labels shape: (10000, 10)
+2018-08-01 12:56:37,200 - log/2018-08-01_train.log - INFO - train image shape: (55000, 784)
+2018-08-01 12:56:37,200 - log/2018-08-01_train.log - INFO - train labels shape: (55000, 10)
+2018-08-01 12:56:37,200 - log/2018-08-01_train.log - INFO - loading pre-trained model from model/points-4000.ckpt....
+2018-08-01 12:57:02,010 - log/2018-08-01_train.log - INFO - data_dir: MNIST_data
+2018-08-01 12:57:02,012 - log/2018-08-01_train.log - INFO - test image shape: (10000, 784)
+2018-08-01 12:57:02,012 - log/2018-08-01_train.log - INFO - test labels shape: (10000, 10)
+2018-08-01 12:57:02,012 - log/2018-08-01_train.log - INFO - train image shape: (55000, 784)
+2018-08-01 12:57:02,012 - log/2018-08-01_train.log - INFO - train labels shape: (55000, 10)
+2018-08-01 12:57:02,012 - log/2018-08-01_train.log - INFO - loading pre-trained model from model/points-4000.ckpt....
+2018-08-01 12:57:32,920 - log/2018-08-01_train.log - INFO - data_dir: MNIST_data
+2018-08-01 12:57:32,921 - log/2018-08-01_train.log - INFO - test image shape: (10000, 784)
+2018-08-01 12:57:32,922 - log/2018-08-01_train.log - INFO - test labels shape: (10000, 10)
+2018-08-01 12:57:32,922 - log/2018-08-01_train.log - INFO - train image shape: (55000, 784)
+2018-08-01 12:57:32,922 - log/2018-08-01_train.log - INFO - train labels shape: (55000, 10)
+2018-08-01 12:57:32,922 - log/2018-08-01_train.log - INFO - loading pre-trained model from model/points-4000.ckpt....
+2018-08-01 12:57:33,304 - log/2018-08-01_train.log - INFO - step 4000, training accuracy 0.14, loss 2.3043
+2018-08-01 12:58:02,426 - log/2018-08-01_train.log - INFO - step 4100, training accuracy 0.4, loss 1.7335
+2018-08-01 12:58:34,216 - log/2018-08-01_train.log - INFO - step 4200, training accuracy 0.76, loss 0.7668
+2018-08-01 12:59:42,553 - log/2018-08-01_train.log - INFO - data_dir: MNIST_data
+2018-08-01 12:59:42,554 - log/2018-08-01_train.log - INFO - test image shape: (10000, 784)
+2018-08-01 12:59:42,554 - log/2018-08-01_train.log - INFO - test labels shape: (10000, 10)
+2018-08-01 12:59:42,554 - log/2018-08-01_train.log - INFO - train image shape: (55000, 784)
+2018-08-01 12:59:42,554 - log/2018-08-01_train.log - INFO - train labels shape: (55000, 10)
+2018-08-01 12:59:42,554 - log/2018-08-01_train.log - INFO - loading pre-trained model from model/points-4000.ckpt....
+2018-08-01 13:00:41,976 - log/2018-08-01_train.log - INFO - data_dir: MNIST_data
+2018-08-01 13:00:41,977 - log/2018-08-01_train.log - INFO - test image shape: (10000, 784)
+2018-08-01 13:00:41,977 - log/2018-08-01_train.log - INFO - test labels shape: (10000, 10)
+2018-08-01 13:00:41,978 - log/2018-08-01_train.log - INFO - train image shape: (55000, 784)
+2018-08-01 13:00:41,978 - log/2018-08-01_train.log - INFO - train labels shape: (55000, 10)
+2018-08-01 13:00:41,978 - log/2018-08-01_train.log - INFO - No pre-trained model from model....
+2018-08-01 13:00:42,470 - log/2018-08-01_train.log - INFO - step 0, training accuracy 0.12, loss 2.3448
+2018-08-01 13:01:14,190 - log/2018-08-01_train.log - INFO - step 100, training accuracy 0.5, loss 1.6681
+2018-08-01 13:01:49,389 - log/2018-08-01_train.log - INFO - step 200, training accuracy 0.54, loss 1.2951
+2018-08-01 13:02:24,979 - log/2018-08-01_train.log - INFO - step 300, training accuracy 0.72, loss 0.9084
+2018-08-01 13:02:55,646 - log/2018-08-01_train.log - INFO - step 400, training accuracy 0.74, loss 0.6269
+2018-08-01 13:03:22,432 - log/2018-08-01_train.log - INFO - step 500, training accuracy 0.9, loss 0.3189
+2018-08-01 13:03:52,931 - log/2018-08-01_train.log - INFO - step 600, training accuracy 0.84, loss 0.4819
+2018-08-01 13:04:28,944 - log/2018-08-01_train.log - INFO - step 700, training accuracy 0.88, loss 0.3181
+2018-08-01 13:05:06,265 - log/2018-08-01_train.log - INFO - step 800, training accuracy 0.82, loss 0.4701
+2018-08-01 13:05:39,734 - log/2018-08-01_train.log - INFO - step 900, training accuracy 0.94, loss 0.2868
+2018-08-01 13:06:09,705 - log/2018-08-01_train.log - INFO - step 1000, training accuracy 0.94, loss 0.3220
+2018-08-01 13:06:10,876 - log/2018-08-01_train.log - INFO - Model saved in file: model/points-1000.ckpt
+2018-08-01 13:06:43,401 - log/2018-08-01_train.log - INFO - step 1100, training accuracy 0.94, loss 0.2758
+2018-08-01 13:07:13,083 - log/2018-08-01_train.log - INFO - step 1200, training accuracy 0.88, loss 0.3073
+2018-08-01 13:07:52,660 - log/2018-08-01_train.log - INFO - data_dir: MNIST_data
+2018-08-01 13:07:52,660 - log/2018-08-01_train.log - INFO - test image shape: (10000, 784)
+2018-08-01 13:07:52,660 - log/2018-08-01_train.log - INFO - test labels shape: (10000, 10)
+2018-08-01 13:07:52,660 - log/2018-08-01_train.log - INFO - train image shape: (55000, 784)
+2018-08-01 13:07:52,660 - log/2018-08-01_train.log - INFO - train labels shape: (55000, 10)
+2018-08-01 13:07:52,660 - log/2018-08-01_train.log - INFO - loading pre-trained model from model/points-1000.ckpt....
+2018-08-01 13:08:55,408 - log/2018-08-01_train.log - INFO - data_dir: MNIST_data
+2018-08-01 13:08:55,408 - log/2018-08-01_train.log - INFO - test image shape: (10000, 784)
+2018-08-01 13:08:55,409 - log/2018-08-01_train.log - INFO - test labels shape: (10000, 10)
+2018-08-01 13:08:55,409 - log/2018-08-01_train.log - INFO - train image shape: (55000, 784)
+2018-08-01 13:08:55,409 - log/2018-08-01_train.log - INFO - train labels shape: (55000, 10)
+2018-08-01 13:08:55,410 - log/2018-08-01_train.log - INFO - loading pre-trained model from model/points-1000.ckpt....
+2018-08-01 13:10:59,256 - log/2018-08-01_train.log - INFO - data_dir: MNIST_data
+2018-08-01 13:10:59,258 - log/2018-08-01_train.log - INFO - test image shape: (10000, 784)
+2018-08-01 13:10:59,258 - log/2018-08-01_train.log - INFO - test labels shape: (10000, 10)
+2018-08-01 13:10:59,258 - log/2018-08-01_train.log - INFO - train image shape: (55000, 784)
+2018-08-01 13:10:59,258 - log/2018-08-01_train.log - INFO - train labels shape: (55000, 10)
+2018-08-01 13:10:59,258 - log/2018-08-01_train.log - INFO - loading pre-trained model from model/points-1000.ckpt....
+2018-08-01 13:14:47,738 - log/2018-08-01_train.log - INFO - data_dir: MNIST_data
+2018-08-01 13:14:47,739 - log/2018-08-01_train.log - INFO - test image shape: (10000, 784)
+2018-08-01 13:14:47,739 - log/2018-08-01_train.log - INFO - test labels shape: (10000, 10)
+2018-08-01 13:14:47,740 - log/2018-08-01_train.log - INFO - train image shape: (55000, 784)
+2018-08-01 13:14:47,740 - log/2018-08-01_train.log - INFO - train labels shape: (55000, 10)
+2018-08-01 13:14:47,740 - log/2018-08-01_train.log - INFO - loading pre-trained model from model/points-1000.ckpt....
+2018-08-01 13:15:44,982 - log/2018-08-01_train.log - INFO - data_dir: MNIST_data
+2018-08-01 13:15:44,983 - log/2018-08-01_train.log - INFO - test image shape: (10000, 784)
+2018-08-01 13:15:44,983 - log/2018-08-01_train.log - INFO - test labels shape: (10000, 10)
+2018-08-01 13:15:44,983 - log/2018-08-01_train.log - INFO - train image shape: (55000, 784)
+2018-08-01 13:15:44,983 - log/2018-08-01_train.log - INFO - train labels shape: (55000, 10)
+2018-08-01 13:15:44,983 - log/2018-08-01_train.log - INFO - loading pre-trained model from model/points-1000.ckpt....
+2018-08-01 13:17:58,755 - log/2018-08-01_train.log - INFO - data_dir: MNIST_data
+2018-08-01 13:17:58,756 - log/2018-08-01_train.log - INFO - test image shape: (10000, 784)
+2018-08-01 13:17:58,756 - log/2018-08-01_train.log - INFO - test labels shape: (10000, 10)
+2018-08-01 13:17:58,756 - log/2018-08-01_train.log - INFO - train image shape: (55000, 784)
+2018-08-01 13:17:58,756 - log/2018-08-01_train.log - INFO - train labels shape: (55000, 10)
+2018-08-01 13:19:18,523 - log/2018-08-01_train.log - INFO - data_dir: MNIST_data
+2018-08-01 13:19:18,524 - log/2018-08-01_train.log - INFO - test image shape: (10000, 784)
+2018-08-01 13:19:18,524 - log/2018-08-01_train.log - INFO - test labels shape: (10000, 10)
+2018-08-01 13:19:18,524 - log/2018-08-01_train.log - INFO - train image shape: (55000, 784)
+2018-08-01 13:19:18,524 - log/2018-08-01_train.log - INFO - train labels shape: (55000, 10)
+2018-08-01 13:19:18,524 - log/2018-08-01_train.log - INFO - loading pre-trained model from model/points-1000.ckpt....
+2018-08-01 13:19:39,180 - log/2018-08-01_train.log - INFO - data_dir: MNIST_data
+2018-08-01 13:19:39,181 - log/2018-08-01_train.log - INFO - test image shape: (10000, 784)
+2018-08-01 13:19:39,181 - log/2018-08-01_train.log - INFO - test labels shape: (10000, 10)
+2018-08-01 13:19:39,181 - log/2018-08-01_train.log - INFO - train image shape: (55000, 784)
+2018-08-01 13:19:39,181 - log/2018-08-01_train.log - INFO - train labels shape: (55000, 10)
+2018-08-01 13:19:39,181 - log/2018-08-01_train.log - INFO - loading pre-trained model from model/points-1000.ckpt....
+2018-08-01 13:21:00,169 - log/2018-08-01_train.log - INFO - data_dir: MNIST_data
+2018-08-01 13:21:00,169 - log/2018-08-01_train.log - INFO - test image shape: (10000, 784)
+2018-08-01 13:21:00,169 - log/2018-08-01_train.log - INFO - test labels shape: (10000, 10)
+2018-08-01 13:21:00,169 - log/2018-08-01_train.log - INFO - train image shape: (55000, 784)
+2018-08-01 13:21:00,169 - log/2018-08-01_train.log - INFO - train labels shape: (55000, 10)
+2018-08-01 13:21:00,169 - log/2018-08-01_train.log - INFO - loading pre-trained model from model/points-1000.ckpt....
+2018-08-01 13:21:51,492 - log/2018-08-01_train.log - INFO - data_dir: MNIST_data
+2018-08-01 13:21:51,492 - log/2018-08-01_train.log - INFO - test image shape: (10000, 784)
+2018-08-01 13:21:51,492 - log/2018-08-01_train.log - INFO - test labels shape: (10000, 10)
+2018-08-01 13:21:51,492 - log/2018-08-01_train.log - INFO - train image shape: (55000, 784)
+2018-08-01 13:21:51,493 - log/2018-08-01_train.log - INFO - train labels shape: (55000, 10)
+2018-08-01 13:21:51,493 - log/2018-08-01_train.log - INFO - loading pre-trained model from model/points-1000.ckpt....
+2018-08-01 13:22:23,167 - log/2018-08-01_train.log - INFO - data_dir: MNIST_data
+2018-08-01 13:22:23,168 - log/2018-08-01_train.log - INFO - test image shape: (10000, 784)
+2018-08-01 13:22:23,168 - log/2018-08-01_train.log - INFO - test labels shape: (10000, 10)
+2018-08-01 13:22:23,168 - log/2018-08-01_train.log - INFO - train image shape: (55000, 784)
+2018-08-01 13:22:23,168 - log/2018-08-01_train.log - INFO - train labels shape: (55000, 10)
+2018-08-01 13:22:23,168 - log/2018-08-01_train.log - INFO - No pre-trained model from model....
+2018-08-01 13:22:23,675 - log/2018-08-01_train.log - INFO - step 0, training accuracy 0.14, loss 2.2968
+2018-08-01 13:23:05,633 - log/2018-08-01_train.log - INFO - data_dir: MNIST_data
+2018-08-01 13:23:05,634 - log/2018-08-01_train.log - INFO - test image shape: (10000, 784)
+2018-08-01 13:23:05,634 - log/2018-08-01_train.log - INFO - test labels shape: (10000, 10)
+2018-08-01 13:23:05,634 - log/2018-08-01_train.log - INFO - train image shape: (55000, 784)
+2018-08-01 13:23:05,634 - log/2018-08-01_train.log - INFO - train labels shape: (55000, 10)
+2018-08-01 13:23:05,634 - log/2018-08-01_train.log - INFO - No pre-trained model from model....
+2018-08-01 13:23:06,129 - log/2018-08-01_train.log - INFO - step 0, training accuracy 0.14, loss 2.2927
+2018-08-01 13:23:36,121 - log/2018-08-01_train.log - INFO - step 100, training accuracy 0.58, loss 1.4180
+2018-08-01 13:24:03,330 - log/2018-08-01_train.log - INFO - step 200, training accuracy 0.58, loss 1.1825
+2018-08-01 13:24:30,223 - log/2018-08-01_train.log - INFO - step 300, training accuracy 0.78, loss 0.4838
+2018-08-01 13:24:56,004 - log/2018-08-01_train.log - INFO - step 400, training accuracy 0.76, loss 0.8803
+2018-08-01 13:25:25,778 - log/2018-08-01_train.log - INFO - step 500, training accuracy 0.82, loss 0.5608
+2018-08-01 13:25:26,517 - log/2018-08-01_train.log - INFO - Model saved in file: model/points-500.ckpt
+2018-08-01 13:25:51,366 - log/2018-08-01_train.log - INFO - data_dir: MNIST_data
+2018-08-01 13:25:51,367 - log/2018-08-01_train.log - INFO - test image shape: (10000, 784)
+2018-08-01 13:25:51,367 - log/2018-08-01_train.log - INFO - test labels shape: (10000, 10)
+2018-08-01 13:25:51,367 - log/2018-08-01_train.log - INFO - train image shape: (55000, 784)
+2018-08-01 13:25:51,367 - log/2018-08-01_train.log - INFO - train labels shape: (55000, 10)
+2018-08-01 13:25:51,367 - log/2018-08-01_train.log - INFO - loading pre-trained model from model/points-500.ckpt....
+2018-08-01 13:25:51,917 - log/2018-08-01_train.log - INFO - step 500, training accuracy 0.72, loss 0.5679

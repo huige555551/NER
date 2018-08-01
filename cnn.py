@@ -1,25 +1,29 @@
 # -*- coding=utf-8 -*-
 # Import data
 from tensorflow.examples.tutorials.mnist import input_data
-
 import tensorflow as tf
-
+import matplotlib.pyplot as plt
+import numpy as np
+import cv2
 flags = tf.app.flags
 FLAGS = flags.FLAGS
-flags.DEFINE_string('data_dir', 'MNIST_data', 'Directory for storing data') # 第一次启动会下载文本资料，放在/tmp/data文件夹下
-
+flags.DEFINE_string('data_dir', 'MNIST_data', 'Directory for storing data')  # 第一次启动会下载文本资料，放在/tmp/data文件夹下
+is_training = False
 print(FLAGS.data_dir)
 mnist = input_data.read_data_sets(FLAGS.data_dir, one_hot=True)
 
+
 def weight_variable(shape):
     # initial = tf.truncated_normal(shape, stddev=0.1) # 变量的初始值为截断正太分布
-    initial = tf.random_normal(shape=shape,mean=0, stddev=0.01, dtype=tf.float32)
+    initial = tf.random_normal(shape=shape, mean=0, stddev=0.01, dtype=tf.float32)
     return tf.Variable(initial)
+
 
 def bias_variable(shape):
     # initial = tf.constant(0.1, shape=shape)
-    initial = tf.random_normal(shape=shape,mean=0, stddev=0.01, dtype=tf.float32)
+    initial = tf.random_normal(shape=shape, mean=0, stddev=0.01, dtype=tf.float32)
     return tf.Variable(initial)
+
 
 def conv2d(x, W):
     """
@@ -33,6 +37,7 @@ def conv2d(x, W):
     """
     return tf.nn.conv2d(x, W, strides=[1, 1, 1, 1], padding='SAME')
 
+
 def max_pool_2x2(x):
     """
     tf.nn.max_pool 进行最大值池化操作,而avg_pool 则进行平均值池化操作
@@ -45,10 +50,11 @@ def max_pool_2x2(x):
     return tf.nn.max_pool(x, ksize=[1, 2, 2, 1],
                           strides=[1, 2, 2, 1], padding='SAME')
 
+
 sess = tf.InteractiveSession()
 
 x = tf.placeholder(tf.float32, [None, 784])
-x_image = tf.reshape(x, [-1,28,28,1]) #将输入按照 conv2d中input的格式来reshape，reshape
+x_image = tf.reshape(x, [-1, 28, 28, 1])  # 将输入按照 conv2d中input的格式来reshape，reshape
 
 """
 # 第一层
@@ -81,33 +87,74 @@ h_pool3 = max_pool_2x2(h_conv3)
 # 第三层 是个全连接层,输入维数7*7*64, 输出维数为1024
 W_fc1 = weight_variable([7 * 7 * 64, 1024])
 b_fc1 = bias_variable([1024])
-h_pool2_flat = tf.reshape(h_pool2, [-1, 7*7*64])
+h_pool2_flat = tf.reshape(h_pool2, [-1, 7 * 7 * 64])
 h_fc1 = tf.nn.elu(tf.matmul(h_pool2_flat, W_fc1) + b_fc1)
-keep_prob = tf.placeholder(tf.float32) # 这里使用了drop out,即随机安排一些cell输出值为0，可以防止过拟合
+keep_prob = tf.placeholder(tf.float32)  # 这里使用了drop out,即随机安排一些cell输出值为0，可以防止过拟合
 h_fc1_drop = tf.nn.dropout(h_fc1, keep_prob)
 
 # 第四层，输入1024维，输出10维，也就是具体的0~9分类
 W_fc2 = weight_variable([1024, 10])
 b_fc2 = bias_variable([10])
-y_conv=tf.nn.softmax(tf.matmul(h_fc1_drop, W_fc2) + b_fc2) # 使用softmax作为多分类激活函数
+y_conv = tf.nn.softmax(tf.matmul(h_fc1_drop, W_fc2) + b_fc2)  # 使用softmax作为多分类激活函数
 y_ = tf.placeholder(tf.float32, [None, 10])
 
-cross_entropy = tf.reduce_mean(-tf.reduce_sum(y_ * tf.log(y_conv), reduction_indices=[1])) # 损失函数，交叉熵
-train_step = tf.train.AdamOptimizer(1e-4).minimize(cross_entropy) # 使用adam优化
-correct_prediction = tf.equal(tf.argmax(y_conv,1), tf.argmax(y_,1)) # 计算准确度
+cross_entropy = tf.reduce_mean(-tf.reduce_sum(y_ * tf.log(y_conv), reduction_indices=[1]))  # 损失函数，交叉熵
+train_step = tf.train.AdamOptimizer(1e-4).minimize(cross_entropy)  # 使用adam优化
+correct_prediction = tf.equal(tf.argmax(y_conv, 1), tf.argmax(y_, 1))  # 计算准确度
 accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
-sess.run(tf.initialize_all_variables()) # 变量初始化
+saver = tf.train.Saver()
+sess.run(tf.initialize_all_variables())  # 变量初始化
 # 用于记录每次训练后loss的值
 loss_val = []
-for i in range(1000):
-    batch = mnist.train.next_batch(50)
-    if i%100 == 0:
-        train_accuracy, loss = sess.run([accuracy, cross_entropy], feed_dict={
-            x:batch[0], y_: batch[1], keep_prob: 1.0})
-        print("step %d, training accuracy %g, loss %.4f"%(i, train_accuracy, loss))
-        # print('loss: %.4f' % cross_entropy)
-    # train_step.run(feed_dict={x: batch[0], y_: batch[1], keep_prob: 0.5})
-    sess.run([train_step],feed_dict={x: batch[0], y_: batch[1], keep_prob: 0.5})
+# training
+if is_training:
+    for i in range(1000):
+        batch = mnist.train.next_batch(50)
+        if i % 100 == 0:
+            train_accuracy, loss = sess.run([accuracy, cross_entropy], feed_dict={
+                x: batch[0], y_: batch[1], keep_prob: 1.0})
+            print("step %d, training accuracy %g, loss %.4f" % (i, train_accuracy, loss))
+        if i % 900 == 0:
+            saver.save(sess, 'cnn-model/points-900.ckpt')
+            # print('loss: %.4f' % cross_entropy)
+        # train_step.run(feed_dict={x: batch[0], y_: batch[1], keep_prob: 0.5})
+        sess.run([train_step], feed_dict={x: batch[0], y_: batch[1], keep_prob: 0.5})
+# testAll
+# print("test accuracy %g" % accuracy.eval(feed_dict={
+#     x: mnist.test.images, y_: mnist.test.labels, keep_prob: 1.0}))
+model_file = tf.train.latest_checkpoint('cnn-model')
+saver.restore(sess, model_file)
+x_test = mnist.test.images[1].reshape([-1, 28 * 28])
+y_test = mnist.test.labels[1].reshape([-1, 10])
+result_conv1 = h_conv1.eval(feed_dict={x: x_test, y_: y_test, keep_prob: 1.0})
+result_conv2 = h_conv2.eval(feed_dict={x: x_test, y_: y_test, keep_prob: 1.0})
+result_conv3 = h_conv3.eval(feed_dict={x: x_test, y_: y_test, keep_prob: 1.0})
 
-print("test accuracy %g"%accuracy.eval(feed_dict={
-    x: mnist.test.images, y_: mnist.test.labels, keep_prob: 1.0}))
+# testImage
+# for _ in range(32):
+#     show_img = result_conv1[:,:,:,_]
+#     show_img = np.reshape(show_img, (28, 28))
+#     plt.subplot(20, 8, _ + 1)
+#     plt.imshow(show_img, cmap='gray')
+#     plt.axis('off')
+#
+# testImage
+# for _ in range(64):
+#     show_img = result_conv2[:,:,:,_]
+#     show_img = np.reshape(show_img, (14, 14))
+#     cv2.resize(show_img, (56, 56))
+#     plt.subplot(8, 8, _ + 1)
+#     plt.imshow(show_img, cmap='gray')
+#     plt.axis('off')
+
+# testImage
+for _ in range(64):
+    show_img = result_conv3[:,:,:,_]
+    show_img = np.reshape(show_img, (14, 14))
+    cv2.resize(show_img, (28, 28))
+    plt.subplot(8, 8, _ + 1)
+    plt.imshow(show_img, cmap='gray')
+    plt.axis('off')
+
+
+plt.show()

@@ -23,3 +23,139 @@
 2018-07-31 10:12:25,243 - log/2018-07-31_train.log - INFO - train labels shape: (55000, 10)
 2018-07-31 10:12:25,244 - log/2018-07-31_train.log - INFO - loading pre-trained model from model/points-4000.ckpt....
 2018-07-31 10:12:25,777 - log/2018-07-31_train.log - INFO - step 4000, training accuracy 0.98, loss 0.0565
+2018-07-31 20:59:58,094 - log/2018-07-31_train.log - INFO - data_dir: MNIST_data
+2018-07-31 20:59:58,095 - log/2018-07-31_train.log - INFO - test image shape: (10000, 784)
+2018-07-31 20:59:58,096 - log/2018-07-31_train.log - INFO - test labels shape: (10000, 10)
+2018-07-31 20:59:58,096 - log/2018-07-31_train.log - INFO - train image shape: (55000, 784)
+2018-07-31 20:59:58,096 - log/2018-07-31_train.log - INFO - train labels shape: (55000, 10)
+2018-07-31 20:59:58,097 - log/2018-07-31_train.log - INFO - loading pre-trained model from model/points-4000.ckpt....
+2018-07-31 21:00:47,588 - log/2018-07-31_train.log - INFO - data_dir: MNIST_data
+2018-07-31 21:00:47,588 - log/2018-07-31_train.log - INFO - test image shape: (10000, 784)
+2018-07-31 21:00:47,588 - log/2018-07-31_train.log - INFO - test labels shape: (10000, 10)
+2018-07-31 21:00:47,588 - log/2018-07-31_train.log - INFO - train image shape: (55000, 784)
+2018-07-31 21:00:47,588 - log/2018-07-31_train.log - INFO - train labels shape: (55000, 10)
+2018-07-31 21:00:47,588 - log/2018-07-31_train.log - INFO - loading pre-trained model from model/points-4000.ckpt....
+2018-07-31 21:01:25,922 - log/2018-07-31_train.log - INFO - data_dir: MNIST_data
+2018-07-31 21:01:25,923 - log/2018-07-31_train.log - INFO - test image shape: (10000, 784)
+2018-07-31 21:01:25,923 - log/2018-07-31_train.log - INFO - test labels shape: (10000, 10)
+2018-07-31 21:01:25,923 - log/2018-07-31_train.log - INFO - train image shape: (55000, 784)
+2018-07-31 21:01:25,923 - log/2018-07-31_train.log - INFO - train labels shape: (55000, 10)
+2018-07-31 21:01:25,923 - log/2018-07-31_train.log - INFO - loading pre-trained model from model/points-4000.ckpt....
+2018-07-31 21:01:58,321 - log/2018-07-31_train.log - INFO - data_dir: MNIST_data
+2018-07-31 21:01:58,322 - log/2018-07-31_train.log - INFO - test image shape: (10000, 784)
+2018-07-31 21:01:58,322 - log/2018-07-31_train.log - INFO - test labels shape: (10000, 10)
+2018-07-31 21:01:58,322 - log/2018-07-31_train.log - INFO - train image shape: (55000, 784)
+2018-07-31 21:01:58,322 - log/2018-07-31_train.log - INFO - train labels shape: (55000, 10)
+2018-07-31 21:01:58,323 - log/2018-07-31_train.log - INFO - loading pre-trained model from model/points-4000.ckpt....
+2018-07-31 21:02:25,086 - log/2018-07-31_train.log - INFO - data_dir: MNIST_data
+2018-07-31 21:02:25,088 - log/2018-07-31_train.log - INFO - test image shape: (10000, 784)
+2018-07-31 21:02:25,088 - log/2018-07-31_train.log - INFO - test labels shape: (10000, 10)
+2018-07-31 21:02:25,088 - log/2018-07-31_train.log - INFO - train image shape: (55000, 784)
+2018-07-31 21:02:25,088 - log/2018-07-31_train.log - INFO - train labels shape: (55000, 10)
+2018-07-31 21:02:25,088 - log/2018-07-31_train.log - INFO - loading pre-trained model from model/points-4000.ckpt....
+2018-07-31 21:03:23,608 - log/2018-07-31_train.log - INFO - data_dir: MNIST_data
+2018-07-31 21:03:23,608 - log/2018-07-31_train.log - INFO - test image shape: (10000, 784)
+2018-07-31 21:03:23,608 - log/2018-07-31_train.log - INFO - test labels shape: (10000, 10)
+2018-07-31 21:03:23,608 - log/2018-07-31_train.log - INFO - train image shape: (55000, 784)
+2018-07-31 21:03:23,608 - log/2018-07-31_train.log - INFO - train labels shape: (55000, 10)
+2018-07-31 21:05:04,457 - log/2018-07-31_train.log - INFO - data_dir: MNIST_data
+2018-07-31 21:05:04,458 - log/2018-07-31_train.log - INFO - test image shape: (10000, 784)
+2018-07-31 21:05:04,458 - log/2018-07-31_train.log - INFO - test labels shape: (10000, 10)
+2018-07-31 21:05:04,458 - log/2018-07-31_train.log - INFO - train image shape: (55000, 784)
+2018-07-31 21:05:04,459 - log/2018-07-31_train.log - INFO - train labels shape: (55000, 10)
+2018-07-31 21:05:38,909 - log/2018-07-31_train.log - INFO - data_dir: MNIST_data
+2018-07-31 21:05:38,909 - log/2018-07-31_train.log - INFO - test image shape: (10000, 784)
+2018-07-31 21:05:38,909 - log/2018-07-31_train.log - INFO - test labels shape: (10000, 10)
+2018-07-31 21:05:38,909 - log/2018-07-31_train.log - INFO - train image shape: (55000, 784)
+2018-07-31 21:05:38,909 - log/2018-07-31_train.log - INFO - train labels shape: (55000, 10)
+2018-07-31 21:05:38,909 - log/2018-07-31_train.log - INFO - No pre-trained model from model....
+2018-07-31 21:06:43,435 - log/2018-07-31_train.log - INFO - data_dir: MNIST_data
+2018-07-31 21:06:43,438 - log/2018-07-31_train.log - INFO - test image shape: (10000, 784)
+2018-07-31 21:06:43,438 - log/2018-07-31_train.log - INFO - test labels shape: (10000, 10)
+2018-07-31 21:06:43,438 - log/2018-07-31_train.log - INFO - train image shape: (55000, 784)
+2018-07-31 21:06:43,438 - log/2018-07-31_train.log - INFO - train labels shape: (55000, 10)
+2018-07-31 21:06:43,438 - log/2018-07-31_train.log - INFO - No pre-trained model from model....
+2018-07-31 21:07:43,338 - log/2018-07-31_train.log - INFO - data_dir: MNIST_data
+2018-07-31 21:07:43,340 - log/2018-07-31_train.log - INFO - test image shape: (10000, 784)
+2018-07-31 21:07:43,340 - log/2018-07-31_train.log - INFO - test labels shape: (10000, 10)
+2018-07-31 21:07:43,340 - log/2018-07-31_train.log - INFO - train image shape: (55000, 784)
+2018-07-31 21:07:43,340 - log/2018-07-31_train.log - INFO - train labels shape: (55000, 10)
+2018-07-31 21:07:43,340 - log/2018-07-31_train.log - INFO - No pre-trained model from model....
+2018-07-31 21:07:45,349 - log/2018-07-31_train.log - INFO - step 0, training accuracy 0.02, loss 2.2981
+2018-07-31 21:08:27,857 - log/2018-07-31_train.log - INFO - step 100, training accuracy 0.56, loss 1.4458
+2018-07-31 21:09:06,094 - log/2018-07-31_train.log - INFO - data_dir: MNIST_data
+2018-07-31 21:09:06,095 - log/2018-07-31_train.log - INFO - test image shape: (10000, 784)
+2018-07-31 21:09:06,095 - log/2018-07-31_train.log - INFO - test labels shape: (10000, 10)
+2018-07-31 21:09:06,095 - log/2018-07-31_train.log - INFO - train image shape: (55000, 784)
+2018-07-31 21:09:06,096 - log/2018-07-31_train.log - INFO - train labels shape: (55000, 10)
+2018-07-31 21:09:06,096 - log/2018-07-31_train.log - INFO - No pre-trained model from model....
+2018-07-31 21:09:08,439 - log/2018-07-31_train.log - INFO - step 0, training accuracy 0.06, loss 2.3213
+2018-07-31 21:09:49,155 - log/2018-07-31_train.log - INFO - step 100, training accuracy 0.44, loss 1.5160
+2018-07-31 21:10:24,364 - log/2018-07-31_train.log - INFO - step 200, training accuracy 0.62, loss 1.0619
+2018-07-31 21:10:59,420 - log/2018-07-31_train.log - INFO - step 300, training accuracy 0.8, loss 0.6848
+2018-07-31 21:11:34,495 - log/2018-07-31_train.log - INFO - step 400, training accuracy 0.78, loss 0.6361
+2018-07-31 21:12:09,462 - log/2018-07-31_train.log - INFO - step 500, training accuracy 0.82, loss 0.6616
+2018-07-31 21:12:50,744 - log/2018-07-31_train.log - INFO - step 600, training accuracy 0.86, loss 0.5241
+2018-07-31 21:13:38,289 - log/2018-07-31_train.log - INFO - step 700, training accuracy 0.88, loss 0.2900
+2018-07-31 21:14:14,929 - log/2018-07-31_train.log - INFO - step 800, training accuracy 0.84, loss 0.4838
+2018-07-31 21:14:59,264 - log/2018-07-31_train.log - INFO - step 900, training accuracy 0.8, loss 0.5762
+2018-07-31 21:16:35,736 - log/2018-07-31_train.log - INFO - data_dir: MNIST_data
+2018-07-31 21:16:35,737 - log/2018-07-31_train.log - INFO - test image shape: (10000, 784)
+2018-07-31 21:16:35,737 - log/2018-07-31_train.log - INFO - test labels shape: (10000, 10)
+2018-07-31 21:16:35,737 - log/2018-07-31_train.log - INFO - train image shape: (55000, 784)
+2018-07-31 21:16:35,737 - log/2018-07-31_train.log - INFO - train labels shape: (55000, 10)
+2018-07-31 21:16:35,737 - log/2018-07-31_train.log - INFO - No pre-trained model from model....
+2018-07-31 21:16:37,813 - log/2018-07-31_train.log - INFO - step 0, training accuracy 0.08, loss 2.3196
+2018-07-31 21:18:12,653 - log/2018-07-31_train.log - INFO - step 100, training accuracy 0.5, loss 1.5261
+2018-07-31 21:19:18,986 - log/2018-07-31_train.log - INFO - step 200, training accuracy 0.7, loss 0.9779
+2018-07-31 21:19:55,203 - log/2018-07-31_train.log - INFO - step 300, training accuracy 0.7, loss 0.7237
+2018-07-31 21:20:30,350 - log/2018-07-31_train.log - INFO - step 400, training accuracy 0.82, loss 0.5427
+2018-07-31 21:21:17,322 - log/2018-07-31_train.log - INFO - step 500, training accuracy 0.88, loss 0.3201
+2018-07-31 21:22:08,274 - log/2018-07-31_train.log - INFO - step 600, training accuracy 0.94, loss 0.3426
+2018-07-31 21:22:55,107 - log/2018-07-31_train.log - INFO - step 700, training accuracy 0.76, loss 0.7367
+2018-07-31 21:23:50,851 - log/2018-07-31_train.log - INFO - step 800, training accuracy 0.84, loss 0.4621
+2018-07-31 21:24:33,797 - log/2018-07-31_train.log - INFO - step 900, training accuracy 0.88, loss 0.3588
+2018-07-31 21:25:13,501 - log/2018-07-31_train.log - INFO - step 1000, training accuracy 0.92, loss 0.3434
+2018-07-31 21:25:14,716 - log/2018-07-31_train.log - INFO - Model saved in file: model/points-1000.ckpt
+2018-07-31 21:25:59,330 - log/2018-07-31_train.log - INFO - step 1100, training accuracy 0.94, loss 0.2024
+2018-07-31 21:26:36,932 - log/2018-07-31_train.log - INFO - step 1200, training accuracy 0.86, loss 0.4333
+2018-07-31 21:27:18,916 - log/2018-07-31_train.log - INFO - step 1300, training accuracy 0.94, loss 0.1737
+2018-07-31 21:28:04,228 - log/2018-07-31_train.log - INFO - step 1400, training accuracy 0.9, loss 0.1983
+2018-07-31 21:28:51,282 - log/2018-07-31_train.log - INFO - step 1500, training accuracy 0.84, loss 0.4198
+2018-07-31 21:29:37,049 - log/2018-07-31_train.log - INFO - step 1600, training accuracy 0.92, loss 0.3692
+2018-07-31 21:30:19,649 - log/2018-07-31_train.log - INFO - step 1700, training accuracy 0.96, loss 0.1289
+2018-07-31 21:31:05,673 - log/2018-07-31_train.log - INFO - step 1800, training accuracy 0.86, loss 0.4248
+2018-07-31 21:31:42,281 - log/2018-07-31_train.log - INFO - step 1900, training accuracy 0.98, loss 0.0996
+2018-07-31 21:32:22,492 - log/2018-07-31_train.log - INFO - step 2000, training accuracy 0.96, loss 0.0924
+2018-07-31 21:32:23,408 - log/2018-07-31_train.log - INFO - Model saved in file: model/points-2000.ckpt
+2018-07-31 21:33:03,701 - log/2018-07-31_train.log - INFO - step 2100, training accuracy 0.94, loss 0.1588
+2018-07-31 21:33:48,322 - log/2018-07-31_train.log - INFO - step 2200, training accuracy 0.96, loss 0.0750
+2018-07-31 21:34:28,819 - log/2018-07-31_train.log - INFO - step 2300, training accuracy 0.94, loss 0.1386
+2018-07-31 21:35:08,624 - log/2018-07-31_train.log - INFO - step 2400, training accuracy 0.98, loss 0.0932
+2018-07-31 21:35:50,896 - log/2018-07-31_train.log - INFO - step 2500, training accuracy 0.94, loss 0.1047
+2018-07-31 21:36:42,656 - log/2018-07-31_train.log - INFO - step 2600, training accuracy 0.94, loss 0.1436
+2018-07-31 21:49:18,833 - log/2018-07-31_train.log - INFO - step 2700, training accuracy 0.96, loss 0.1710
+2018-07-31 21:50:00,368 - log/2018-07-31_train.log - INFO - step 2800, training accuracy 0.9, loss 0.1729
+2018-07-31 21:50:34,971 - log/2018-07-31_train.log - INFO - step 2900, training accuracy 1, loss 0.0551
+2018-07-31 21:51:09,019 - log/2018-07-31_train.log - INFO - step 3000, training accuracy 0.96, loss 0.0744
+2018-07-31 21:51:10,077 - log/2018-07-31_train.log - INFO - Model saved in file: model/points-3000.ckpt
+2018-07-31 21:51:43,925 - log/2018-07-31_train.log - INFO - step 3100, training accuracy 0.96, loss 0.1207
+2018-07-31 21:52:17,757 - log/2018-07-31_train.log - INFO - step 3200, training accuracy 0.96, loss 0.0813
+2018-07-31 21:52:52,048 - log/2018-07-31_train.log - INFO - step 3300, training accuracy 0.96, loss 0.1978
+2018-07-31 21:53:25,707 - log/2018-07-31_train.log - INFO - step 3400, training accuracy 1, loss 0.0232
+2018-07-31 21:53:59,490 - log/2018-07-31_train.log - INFO - step 3500, training accuracy 0.94, loss 0.1349
+2018-07-31 21:54:34,202 - log/2018-07-31_train.log - INFO - step 3600, training accuracy 0.98, loss 0.0581
+2018-07-31 21:55:08,274 - log/2018-07-31_train.log - INFO - step 3700, training accuracy 0.98, loss 0.0533
+2018-07-31 21:55:42,007 - log/2018-07-31_train.log - INFO - step 3800, training accuracy 0.98, loss 0.0389
+2018-07-31 21:56:15,579 - log/2018-07-31_train.log - INFO - step 3900, training accuracy 0.94, loss 0.1656
+2018-07-31 21:56:49,103 - log/2018-07-31_train.log - INFO - step 4000, training accuracy 0.84, loss 0.4682
+2018-07-31 21:56:49,737 - log/2018-07-31_train.log - INFO - Model saved in file: model/points-4000.ckpt
+2018-07-31 21:57:23,518 - log/2018-07-31_train.log - INFO - step 4100, training accuracy 0.96, loss 0.1508
+2018-07-31 21:57:57,041 - log/2018-07-31_train.log - INFO - step 4200, training accuracy 0.96, loss 0.1425
+2018-07-31 21:58:31,185 - log/2018-07-31_train.log - INFO - step 4300, training accuracy 0.94, loss 0.2619
+2018-07-31 21:59:05,326 - log/2018-07-31_train.log - INFO - step 4400, training accuracy 1, loss 0.0280
+2018-07-31 21:59:39,644 - log/2018-07-31_train.log - INFO - step 4500, training accuracy 0.94, loss 0.0929
+2018-07-31 22:00:13,309 - log/2018-07-31_train.log - INFO - step 4600, training accuracy 0.96, loss 0.1447
+2018-07-31 22:00:47,186 - log/2018-07-31_train.log - INFO - step 4700, training accuracy 0.96, loss 0.0788
+2018-07-31 22:01:20,667 - log/2018-07-31_train.log - INFO - step 4800, training accuracy 0.94, loss 0.1367
+2018-07-31 22:01:56,964 - log/2018-07-31_train.log - INFO - step 4900, training accuracy 0.98, loss 0.0389
